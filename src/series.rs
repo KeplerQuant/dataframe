@@ -79,3 +79,11 @@ impl<T: Copy + PartialOrd> Series<T> {
         self.cross_over(other) || self.cross_under(other)
     }
 }
+
+/// Implementation of the `AsRef` trait for the `Series` type, allowing a `Series<T>`
+/// to be referenced as a slice `[T]`.
+impl<T> AsRef<[T]> for Series<T> {
+    fn as_ref(&self) -> &[T] {
+        &self.0
+    }
+}
