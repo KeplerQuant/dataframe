@@ -1,7 +1,7 @@
 /// A series of elements.
 ///
 /// This struct is generic over an arbitrary type T.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Series<T>(Vec<T>);
 
 impl<T: Copy + PartialOrd> Series<T> {
@@ -22,8 +22,8 @@ impl<T: Copy + PartialOrd> Series<T> {
     }
 
     /// Returns all values in the series.
-    pub fn values(&self) -> &Vec<T> {
-        self.0.as_ref()
+    pub fn values(&self) -> Vec<T> {
+        self.0.to_vec()
     }
 
     /// Returns the length of the series.
