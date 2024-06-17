@@ -2,7 +2,7 @@ use super::{row::Row, series::Series};
 use yata::prelude::OHLCV;
 
 /// Represents a DataFrame which is used to hold market data.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct DataFrame {
     close: Series<f64>,
     open: Series<f64>,
