@@ -2,11 +2,11 @@ use crate::{ticker_row::TickerRow, Series};
 
 #[derive(Debug, Clone)]
 pub struct Ticker {
-    pub bid_price: Series<f64>,
-    pub bid_qty: Series<f64>,
-    pub ask_price: Series<f64>,
-    pub ask_qty: Series<f64>,
-    pub rows: Vec<TickerRow>,
+    bid_price: Series<f64>,
+    bid_qty: Series<f64>,
+    ask_price: Series<f64>,
+    ask_qty: Series<f64>,
+    rows: Vec<TickerRow>,
 }
 
 impl Ticker {
