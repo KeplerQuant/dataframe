@@ -1,2 +1,0 @@
-mod ema;
-mod macd;

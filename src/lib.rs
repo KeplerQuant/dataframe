@@ -1,7 +1,5 @@
 /// This module contains the `DataFrame` structure and associated functions.
 mod frame;
-/// This module contains technical analysis functions.
-mod indicator;
 /// This module contains the `Kline` structure and associated functions.
 mod kline;
 /// This module contains the `KlineRow` structure and associated functions.
@@ -19,4 +17,3 @@ pub use kline_row::KlineRow;
 pub use series::Series;
 pub use ticker::Ticker;
 pub use ticker_row::TickerRow;
-pub use yata::*;
