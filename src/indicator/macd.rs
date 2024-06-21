@@ -8,7 +8,7 @@ use crate::frame::DataFrame;
 impl DataFrame {
     pub fn macd(&self) -> Result<Vec<IndicatorResult>> {
         let macd = MACD::default();
-        let macd = macd.over(self.rows())?;
+        let macd = macd.over(self.kline.rows())?;
 
         Ok(macd)
     }

@@ -1,8 +1,8 @@
 use yata::prelude::OHLCV;
 
-/// Represents a row of market data.
+/// Represents a kline row of market data.
 #[derive(Debug, Copy, Clone)]
-pub struct Row {
+pub struct KlineRow {
     close: f64,      // Closing price
     open: f64,       // Opening price
     high: f64,       // Highest price in the period
@@ -12,7 +12,7 @@ pub struct Row {
     end_time: i64,   // End time of the period
 }
 
-impl Row {
+impl KlineRow {
     /// Creates a new `Row` with the given parameters.
     ///
     /// # Parameters
@@ -56,7 +56,7 @@ impl Row {
 }
 
 /// `Row` implements `OHLCV` to provide open, high, low, close, and volume values.
-impl OHLCV for Row {
+impl OHLCV for KlineRow {
     fn open(&self) -> f64 {
         self.open
     }
