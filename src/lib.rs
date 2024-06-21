@@ -14,6 +14,9 @@ mod ticker;
 mod ticker_row;
 
 pub use frame::DataFrame;
+pub use kline::Kline;
 pub use kline_row::KlineRow;
 pub use series::Series;
+pub use ticker::Ticker;
+pub use ticker_row::TickerRow;
 pub use yata::*;
