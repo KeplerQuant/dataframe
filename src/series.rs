@@ -1,7 +1,7 @@
 /// A series of elements.
 ///
 /// This struct is generic over an arbitrary type T.
-#[derive(Debug, Clone)]
+#[derive(Default, Debug, Clone)]
 pub struct Series<T>(Vec<T>);
 
 impl<T: Copy + PartialOrd> Series<T> {
